@@ -16,6 +16,7 @@ class MainWidget(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('ui forms/main.ui', self)
+        uic.loadUi('ui forms/addEditCoffeeForm.ui.ui', self)
         self.setWindowTitle('Menu')
         self.pushButton.connect(self.a())
         self.show()
