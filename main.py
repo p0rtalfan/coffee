@@ -36,3 +36,7 @@ class MainWidget(QMainWindow):
         self.tableWidget.setHorizontalHeaderLabels(self.table[0])
         self.show_table(self.current_table)
         self.show()
+
+app = QApplication(sys.argv)
+ex = MainWidget()
+sys.exit(app.exec_())
