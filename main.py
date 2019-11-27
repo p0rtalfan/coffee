@@ -15,15 +15,15 @@ class MainWidget(QMainWindow):
     # initialization
     def __init__(self):
         super().__init__()
-        uic.loadUi('ui forms/main.ui', self)
-        uic.loadUi('ui forms/addEditCoffeeForm.ui.ui', self)
+        uic.loadUi('UI/main.ui', self)
+        uic.loadUi('UI/addEditCoffeeForm.ui.ui', self)
         self.setWindowTitle('Menu')
         self.pushButton.connect(self.a())
         self.show()
 
 
     def a(self):
-        con = sqlite3.connect('coffee.db')
+        con = sqlite3.connect('data/coffee.db')
         cur = con.cursor()
         self.table = cur.execute("SELECT * from coffee").fetchall()
         length = len(self.table)
